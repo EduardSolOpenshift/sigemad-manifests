@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: dsmarkromero/sigemad-back:v1.05
+          image: dsmarkromero/sigemad-back:v1.06
           ports:
             - containerPort: 8080
           env:
