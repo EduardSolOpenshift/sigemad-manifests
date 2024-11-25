@@ -5,22 +5,23 @@ metadata:
   namespace: ns-sigemad
   annotations:
     kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   rules:
     - host: localhost
       http:
         paths:
-          - path: /geoserver
-            pathType: Prefix
-            backend:
-              service:
-                name: svc-geoserver
-                port:
-                  number: 8080
-          - path: /
-            pathType: Prefix
+          - path: /(.*)
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: svc-frontend
                 port:
                   number: 80
+          - path: /geoserver/(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: svc-geoserver
+                port:
+                  number: 8080
