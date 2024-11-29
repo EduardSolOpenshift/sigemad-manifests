@@ -11,6 +11,13 @@ spec:
     - host: d0e9cd5aeacd.ngrok.app
       http:
         paths:
+          - path: /swagger(/.*)?
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: svc-backend
+                port:
+                  number: 8080
           - path: /api/(.*)
             pathType: ImplementationSpecific
             backend:
@@ -18,3 +25,4 @@ spec:
                 name: svc-backend
                 port:
                   number: 8080
+
