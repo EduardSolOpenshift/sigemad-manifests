@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: sqlserver
-  namespace: ns-sigemad
+  namespace: ns-sigemad-release
 spec:
   serviceName: sqlserver
   replicas: 1
