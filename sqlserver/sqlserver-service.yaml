@@ -9,6 +9,6 @@ spec:
   ports:
     - protocol: TCP
       port: 1433
-      targetPort: 1433
-      nodePort: 31433  # Puedes elegir un puerto entre 30000 y 32767
+      targetPort: 1435
+      nodePort: 31434  # Puedes elegir un puerto entre 30000 y 32767
   type: NodePort
