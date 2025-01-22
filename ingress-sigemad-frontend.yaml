@@ -8,7 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   rules:
-    - host: 296fddc9cc1d.ngrok.app
+    - host: 742faf6d5cc5.ngrok.app
       http:
         paths:
           - path: /geoserver/(.*)
