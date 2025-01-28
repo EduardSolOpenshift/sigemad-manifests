@@ -5,13 +5,13 @@ metadata:
   namespace: ns-sigemad
   annotations:
     kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
     - host: c5f5f8e23120.ngrok.app
       http:
         paths:
-          - path: /geoserver/(.*)
+          - path: /geoserver(/|$)(.*)
             pathType: ImplementationSpecific
             backend:
               service:
