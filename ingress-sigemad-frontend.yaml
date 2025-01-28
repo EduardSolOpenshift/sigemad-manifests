@@ -11,7 +11,7 @@ spec:
     - host: 16d7751cf0d4.ngrok.app
       http:
         paths:
-          - path: /geoserver/(.*)
+          - path: /geoserver/web/
             pathType: ImplementationSpecific
             backend:
               service:
