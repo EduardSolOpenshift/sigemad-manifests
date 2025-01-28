@@ -9,7 +9,7 @@ metadata:
     # nginx.ingress.kubernetes.io/rewrite-target: /api/$1
 spec:
   rules:
-    - host: 93cda165f54a.ngrok.app
+    - host: 16d7751cf0d4.ngrok.app
       http:
         paths:
           - path: /swagger(/.*)?
