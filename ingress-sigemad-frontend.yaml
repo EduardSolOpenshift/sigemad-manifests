@@ -8,7 +8,7 @@ metadata:
     # Eliminamos la parte de rewrite-target
 spec:
   rules:
-    - host: 95509f07aa92.ngrok.app
+    - host: befb6def32b1.ngrok.app
       http:
         paths:
           - path: /geoserver
