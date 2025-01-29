@@ -14,22 +14,22 @@ spec:
         app: geoserver
     spec:
       containers:
-        - name: geoserver
-          image: docker.osgeo.org/geoserver:2.26.1
-          ports:
-            - containerPort: 8080
-          env:
-            - name: INSTALL_EXTENSIONS
-              value: "true"
-            - name: STABLE_EXTENSIONS
-              value: "sqlserver"
-            - name: GEOSERVER_ADMIN_USER
-              value: admin
-            - name: GEOSERVER_ADMIN_PASSWORD
-              value: sigemad
-          volumeMounts:
-            - name: geoserver-data
-              mountPath: /var/local/geoserver
+      - name: geoserver
+        image: docker.osgeo.org/geoserver:2.26.1
+        ports:
+          - containerPort: 8080
+        env:
+          - name: INSTALL_EXTENSIONS
+            value: "true"
+          - name: STABLE_EXTENSIONS
+            value: "sqlserver"
+          - name: GEOSERVER_ADMIN_USER
+            value: "admin"
+          - name: GEOSERVER_ADMIN_PASSWORD
+            value: "sigemad"
+        volumeMounts:
+          - name: geoserver-data
+            mountPath: /opt/geoserver_data
       volumes:
         - name: geoserver-data
           persistentVolumeClaim:
