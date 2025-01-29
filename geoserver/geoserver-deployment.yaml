@@ -27,6 +27,13 @@ spec:
             value: "admin"
           - name: GEOSERVER_ADMIN_PASSWORD
             value: "sigemad"
+          - name: EXTRA_JAVA_OPTS
+            value: "-Dwicket.originCheck=false"
+          # Context y URL base correctos
+          - name: WEBAPP_CONTEXT
+            value: "/geoserver"
+          - name: PROXY_BASE_URL
+            value: "https://91de01098676.ngrok.app/geoserver"
         volumeMounts:
           - name: geoserver-data
             mountPath: /opt/geoserver_data
