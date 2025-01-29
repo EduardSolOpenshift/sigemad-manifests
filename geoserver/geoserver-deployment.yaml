@@ -28,7 +28,7 @@ spec:
           - name: GEOSERVER_ADMIN_PASSWORD
             value: "sigemad"
           - name: PROXY_BASE_URL
-            value: "https://91de01098676.ngrok.app/geoserver"
+            value: "https://91de01098676.ngrok.app/geoserver/web"
         volumeMounts:
           - name: geoserver-data
             mountPath: /opt/geoserver_data
