@@ -7,6 +7,6 @@ data:
   config.json: |
     {
       production: true,
-      urlBase: '/api/v1',
+      urlBase: 'https://23d9b63996f0.ngrok.app/api/v1',
       urlGeoserver: '/geoserver',
     }
